@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Phase2_Assisted_Practice_lesson2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>GetHandler</servlet-name>
+    <servlet-class>GetHandler</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PostHandler</servlet-name>
+    <servlet-class>PostHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetHandler</servlet-name>
+    <url-pattern>/GetHandler</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PostHandler</servlet-name>
+    <url-pattern>/PostHandler</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+        <servlet-name>NameServlet</servlet-name>
+        <servlet-class>NameServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+        <servlet-name>NameServlet</servlet-name>
+        <url-pattern>/NameServlet</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+    <servlet-name>InterfaceDemo</servlet-name>
+    <servlet-class>InterfaceDemo</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>InterfaceDemo</servlet-name>
+    <url-pattern>/InterfaceDemo</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+    <filter-name>loginFilter</filter-name>
+    <filter-class>LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>loginFilter</filter-name>
+    <url-pattern>/AccountDashboard</url-pattern>
+    <url-pattern>/AccountProfile</url-pattern>
+  </filter-mapping>
+  
+  
+  <servlet>
+    <servlet-name>AccountDashboard</servlet-name>
+    <servlet-class>AccountDashboard</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AccountProfile</servlet-name>
+    <servlet-class>AccountProfile</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>InfoPage</servlet-name>
+    <servlet-class>InfoPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AccountDashboard</servlet-name>
+    <url-pattern>/AccountDashboard</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>AccountProfile</servlet-name>
+    <url-pattern>/AccountProfile</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>InfoPage</servlet-name>
+    <url-pattern>/InfoPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Dashboard</servlet-name>
+    <servlet-class>com.lesson2.Dashboard</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>Dashboard</servlet-name>
+    <url-pattern>/Dashboard</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+     <servlet>
+    <servlet-name>LoginServletURL</servlet-name>
+   <servlet-class>LoginServletURL</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DashboardURL</servlet-name>
+    <servlet-class>DashboardURL</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>DashboardURL</servlet-name>
+    <url-pattern>/DashboardURL</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>LoginServletURL</servlet-name>
+    <url-pattern>/LoginServletURL</url-pattern>
+  </servlet-mapping>
+   
+  <servlet>
+    <servlet-name>LoginServletHiddenForm</servlet-name>
+    <servlet-class>LoginServletHiddenForm</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DashboardHiddenForm</servlet-name>
+    <servlet-class>DashboardHiddenForm</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>DashboardHiddenForm</servlet-name>
+    <url-pattern>/DashboardHiddenForm</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>LoginServletHiddenForm</servlet-name>
+    <url-pattern>/LoginServletHiddenForm</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LoginServletHTTP</servlet-name>
+    <servlet-class>LoginServletHTTP</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DashboardHTTP</servlet-name>
+    <servlet-class>DashboardHTTP</servlet-class>
+  </servlet>
+ 
+  <servlet-mapping>
+    <servlet-name>DashboardHTTP</servlet-name>
+    <url-pattern>/DashboardHTTP</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>LoginServletHTTP</servlet-name>
+    <url-pattern>/LoginServletHTTP</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>LoginServletLoginLogout</servlet-name>
+    <servlet-class>LoginServletLoginLogout</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DashboardLoginLogout</servlet-name>
+    <servlet-class>DashboardLoginLogout</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>com.lesson2.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServletLoginLogout</servlet-name>
+    <url-pattern>/LoginServletLoginLogout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DashboardLoginLogout</servlet-name>
+    <url-pattern>/DashboardLoginLogout</url-pattern>
+  </servlet-mapping>
+  
+
+</web-app>
+</element>
